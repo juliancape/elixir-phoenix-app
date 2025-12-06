@@ -36,7 +36,7 @@ defmodule SlaxWeb.Layouts do
   def app(assigns) do
     ~H"""
     <main class="flex w-full h-screen text-gray-700">
-        {render_slot(@inner_block)}
+      {render_slot(@inner_block)}
     </main>
 
     <.flash_group flash={@flash} />
