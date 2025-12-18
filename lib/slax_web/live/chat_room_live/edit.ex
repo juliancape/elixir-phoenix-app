@@ -20,8 +20,8 @@ defmodule SlaxWeb.ChatRoomLive.Edit do
         </.header>
 
          <.form for={@form} id="room-form" class="mt-10 space-y-8" phx-change="validate-room" phx-submit="save-room">
-          <.input field={@form[:name]} type="text" label="Name" />
-          <.input field={@form[:topic]} type="text" label="Topic" />
+          <.input field={@form[:name]} type="text" label="Name" phx-debounce={1000} />
+          <.input field={@form[:topic]} type="text" label="Topic" phx-debounce />
           <div class="mt-2 flex items-center justify-between gap-6">
             <.button phx-disable-with="Saving..." class="btn btn-primary w-full">Save</.button>
           </div>
